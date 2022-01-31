@@ -33,6 +33,7 @@ namespace TrafficPolice
             officer.Patronymic = tb_Pathroname.Text;
             officer.Position = tb_Position.Text;
             officer.Rank = tb_Rank.Text;
+            officer.ImgPolice = "img/3.jpg";
             BD_Connection.connection.Traffic_Police_Officer.Add(officer);
             BD_Connection.connection.SaveChanges();
             MessageBox.Show("Сохранение прошло успешно");

@@ -324,6 +324,9 @@
     <Resource Include="img\c1.jpg" />
     <Resource Include="img\c2.jpg" />
     <Resource Include="img\c3.jpg" />
+    <Resource Include="img\01.png" />
+    <Resource Include="img\2.jpg" />
+    <Resource Include="img\3.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -33,6 +33,7 @@ namespace TrafficPolice
             owner.Patronymic = tb_Pathroname.Text;
             owner.Place_of_Residence = tb_Place.Text;
             owner.Year_of_Birth = Convert.ToDateTime(tb_Birth.Text);
+            owner.ImgOwner = "img/01.jpg";
             //owner.Gender = Convert.ToBoolean(tb_Gender.Text);
             if (tb_Gender.Text == "Мужчина")
             {

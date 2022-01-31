@@ -33,6 +33,7 @@ namespace TrafficPolice
             car.Engine_number = tb_Engine_number.Text;
             car.Colour = tb_Colour.Text;
             car.Car_brand = tb_Car_brand.Text;
+            car.Image = "img/2.jpg";
             BD_Connection.connection.Car.Add(car);
             BD_Connection.connection.SaveChanges();
             MessageBox.Show("Сохранение прошло успешно");
