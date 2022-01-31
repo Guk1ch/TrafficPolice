@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace TrafficPolice
 {
@@ -44,6 +46,21 @@ namespace TrafficPolice
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddOwnerPage());
+        }
+        private void btn_excel_Click(object sender, RoutedEventArgs e)
+        {
+            var allowner = BD_Connection.connection.Owner.ToList();
+            var application = new Excel.Application();
+            application.SheetsInNewWorkbook = allowner.Count();
+            Excel.Workbook workbook = application.Workbooks.Add(Type.Missing);
+
+            int startRowINdex = 1;
+            for (int i = 0; i < allowner.Count(); i++)
+			{
+                Excel.Worksheet worksheet = application.Worksheets.Item[i + 1];
+                worksheet.Name = allowner[i].Name;
+                application.Visible = true;
+            }
         }
     }
 }

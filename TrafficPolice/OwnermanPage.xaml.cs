@@ -56,5 +56,10 @@ namespace TrafficPolice
         {
             NavigationService.GoBack();
         }
-    }
+
+		private void btn_excel_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }
